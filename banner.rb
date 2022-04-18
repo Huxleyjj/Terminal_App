@@ -18,8 +18,8 @@ banner = ''"
 
 "''
 
-puts banner
-puts 'Welcome to Greek Gods'.yellow
+puts banner.yellow
+puts 'Welcome to Greek Gods'.blue
 
 prompt.ask("What is your name?")
 prompt.yes?("Do you want to find your inner Greek God?")
