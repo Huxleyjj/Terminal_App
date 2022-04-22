@@ -1,6 +1,6 @@
 require 'colorize'
 require 'rubocop'
-require "tty-prompt"
+require 'tty-prompt'
 
 prompt = TTY::Prompt.new
 
@@ -21,6 +21,6 @@ banner = ''"
 puts banner.yellow
 puts 'Welcome to Greek Gods'.blue
 
-prompt.ask("What is your name?")
-prompt.yes?("Do you want to find your inner Greek God?")
-prompt.select("Choose your destiny?", %w(About Questionaire Exit))
+prompt.ask('What is your name?')
+prompt.yes?('Do you want to find your inner Greek God?')
+prompt.select('Choose your destiny?', %w[About Questionaire Exit])
