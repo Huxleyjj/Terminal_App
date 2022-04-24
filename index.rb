@@ -17,7 +17,7 @@ banner = ''"
                ███    ███                             ▀
 
 "''
-# Welcoming and Menu
+# welcoming and Menu
 puts banner.yellow
 puts 'Hello, welcome to Discover your Greek God'.blue
 puts "What is your name?"
@@ -67,9 +67,9 @@ class Questionnaire_menu
       hermes: 0
     }
 
-    @question1 = 'You are waiting in line at a supermarket. The old lady in front of you drops a $50 note, without realising it. What do you do?'
-    @question2 = "You're in a minor car accident. The person that rear-ended, approaches your window. What do you say?"
-    @question3 = 'You are sitting at the table eating dinner. Your loyal dog by your side staring at you. You have one chicken tender left. Do you?'
+    @question1 = 'You are waiting in line at a supermarket. The old lady in front of you drops a $50 note, without realising it. What do you do?'.yellow
+    @question2 = "You're in a minor car accident. The person that rear-ended, approaches your window. What do you say?".yellow
+    @question3 = 'You are sitting at the table eating dinner. Your loyal dog by your side staring at you. You have one chicken tender left. Do you?'.yellow
 
     @question1_answers = [
       { id: 'a', text: 'Pick it up and put it in your pocket', god_type: 'hermes' },
@@ -88,6 +88,7 @@ class Questionnaire_menu
     ]
   end
 
+  # method to print question and various answer options
   def print_question(question, answers)
     puts question
     answers.each do |answer|
@@ -95,17 +96,19 @@ class Questionnaire_menu
     end
   end
 
-
+  # error message if incorrect user input
   def get_user_answer
-    user_answer = ''
-    while user_answer != %w[a b c]
-      puts 'error, please select a different answer'
+       user_answer = gets.chomp
+
+    while !['a', 'b', 'c'].include?(user_answer)
+      puts "Error, please select a different answer".red
       user_answer = gets.chomp
     end
-
+    
     user_answer
   end
 
+  # god counter
   def update_god_count(id, answers)
     answers.each do |answer|
       if id == answer[:id]
@@ -115,6 +118,7 @@ class Questionnaire_menu
     end
   end
 
+  # keeps track of answers, and returns the highest selected God
   def check_user_god_type
     highest_count = 0
     selected_god = ''
@@ -129,7 +133,7 @@ class Questionnaire_menu
     selected_god
   end
 
-  # Code to execute questionnaire
+  # code to execute questionnaire
   def run_questionnaire
     puts 'You will now be asked a series of questions, to determine which Greek God personality you share.'
     puts '================================================================================================'
@@ -137,27 +141,28 @@ class Questionnaire_menu
     puts '========================================================================='
 
     print_question @question1, @question1_answers
-    user_answer = gets.chomp
+    user_answer = get_user_answer
     update_god_count user_answer, @question1_answers
 
     print_question @question2, @question2_answers
-    user_answer = gets.chomp
+    user_answer = get_user_answer
     update_god_count user_answer, @question2_answers
 
     print_question @question3, @question3_answers
-    user_answer = gets.chomp
+    user_answer = get_user_answer
     update_god_count user_answer, @question3_answers
 
     puts 'You are the Greek God' + ' ' + check_user_god_type
   end
 end
 
-# Help menu, explains general overview of application
+# help menu, explains general overview of application
 class Help_menu
   def help_options
- puts "Help option"
+ puts "Discover your Greek God is a fun personality questionnaire which matches your personality with a Greek God.\n\nYou will be presented with a situation and a list of options. When prompted, you must select one of the available options by typing the letter corresponding to the choice and pressing enter. If you enter an invalid key which is not one of the available choices, you will be asked to enter a new key. After all questions have been answered your Greek God will be revealed!"
   end
 end
+
 
 
 # menu control flow

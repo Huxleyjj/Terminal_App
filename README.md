@@ -10,7 +10,7 @@
 - Development Log
 - Testing
 - Ruby Gems
-- Help File
+- Installation Instructions
 
 ## Software Development Plan
 
@@ -31,6 +31,10 @@ Discover your Greek God includes three Greek Gods with distinct personalities. T
 ### Questionnaire
 
 The questionnaire is the primary design of this application. Several questions are printed to the screen. These questions present a scenario and ask the user to select one of the pre-defined responses. The user's Greek God is determined by their responses to these questions.
+
+### Help
+
+The help option provides details about the application.
 
 ## User Interaction and Experience
 
@@ -70,4 +74,92 @@ Screenshot taken from early on in the process of using Trello Board
 
 ![trello](docs/trello_1.png)
 
-Link to my Trello board [Trello board](https://trello.com/b/3AGly3Z8/terminalapp)
+Link to my [Trello board](https://trello.com/b/3AGly3Z8/terminalapp)
+
+## Development Log
+
+#### Tuesday 12th April
+
+- Discussed application objects with Lavanya. Decided with Greek God questionnaire.
+- Made control flow diagram.
+- Created Trello board account.
+- Researched Ruby gems.
+
+#### Wednesday 13th April
+
+- Started working on building main quiz foundation of app.
+- Built a basic menu.
+
+#### Friday 15th April
+
+- Structured quiz in various classes and methods, making code DRY.
+- Added in ASCII art into welcome/menu display.
+- Imported gems into code e.g TTY-Prompt for menu.
+
+#### Saturday 16th April
+
+- Proceeded to work on quiz. Making sure questions and answers loop together.
+- Created README.md
+
+##### Sunday 17th April
+
+- Refactored code in certain functions.
+- Tested quiz code, made it DRY again.
+- Manual testing.
+
+#### Monday 18th
+
+- Created slidedeck in preparation for presentations.
+- First push to github. Initial setup.
+
+Unfortunately I tested positive to corona virus, over the Easter long weekend. As a result, I wasn't able to continually be as productive with my application. Was feeling quite unwell, for most of the week. Because of this, I forgot to keep track of daily development log, and any time I was feeling okay to work, I mainly focused on making the application functional, in order to have something to submit.
+
+## Testing
+
+Most of the testing was manually done. Created various different test files which mainly focused on structuring and flow of the questionnaire.
+Running the programme and entering a set of inputs were used to test the application's features. The programme was intended to continue after these inputs were valid. When user inputs were invalid, the application was expected to display a message telling the user that the input was invalid and re-present the question. Tests were carried out by myself, and a friend.
+I also installed the ruby gem 'rubocop', which scans code and reports syntax errors.
+
+## Ruby Gems
+
+The following Ruby gems are required to run the application:
+
+- colorize (https://rubygems.org/gems/colorize)
+- tty-prompt (https://rubygems.org/gems/tty-prompt)
+- crayon (https://rubygems.org/gems/crayon)
+- progress_bar (https://rubygems.org/gems/progress_bar)
+
+These gems can be installed by entering the following code in the terminal:
+
+```
+gem install colorize
+gem install tty-prompt
+gem install crayon
+gem install progress_bar
+
+```
+
+## Installation Instructins
+
+1. Install Ruby onto your computer. That can be done following the instructions on this [page](https://www.ruby-lang.org/en/documentation/installation/)
+
+2. Install bundler. Run the following command line instruction to install this gem:
+
+```
+gem install bundler
+```
+
+3. Clone the file from this repository by using the following command line instruction:
+
+```
+git clone https://github.com/Huxleyjj/Terminal_App
+
+4. Now you can run the application in your terminal by typing:
+
+```
+
+ruby index.rb
+
+```
+
+```
