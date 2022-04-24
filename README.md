@@ -1,5 +1,7 @@
 # Discover your Greek God
 
+github account https://github.com/Huxleyjj/Terminal_App
+
 ## Table of contents
 
 - Software Development Plan
