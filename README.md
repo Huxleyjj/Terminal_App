@@ -34,4 +34,10 @@ The questionnaire is the primary design of this application. Several questions a
 
 ### User Interaction and Experience
 
+The application starts with the main screen being displayed
+
 ![start](docs/start.png)
+
+The user is asked for their name and then asked to select one of the options.
+
+![menu](docs/menu.png)
