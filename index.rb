@@ -19,7 +19,10 @@ banner = ''"
 "''
 # Welcoming and Menu
 puts banner.yellow
-puts 'Hello. Welcome to Discover your Greek God'.blue
+puts 'Hello, welcome to Discover your Greek God'.blue
+puts "What is your name?"
+name = gets.chomp
+puts "Hi #{name}, please"
 
 main_menu = [
   { name: 'Learn about the Greek Gods', value: 1 },
@@ -30,8 +33,8 @@ main_menu = [
 
 user_option = $prompt.select('Select an option:'.yellow, main_menu)
 
-# Option 1
-class About
+
+class About_menu
   def option_1
     learn_god = [
       { name: 'Athena', value: 1 },
@@ -41,6 +44,7 @@ class About
 
     run_option_1 = $prompt.select('Select a God to learn more about:'.yellow, learn_god)
 
+    # Option 1
     case run_option_1
     when 1
       puts Crayon.on_blue 'The goddess of wisdom and war. Shrewd and clever. The protector of civilization: focus on law and order, math, arts and crafts, and rational thought.'
@@ -53,7 +57,7 @@ class About
 end
 
 # Option 2
-class Questionnaire
+class Questionnaire_menu
   attr_accessor :god_count
 
   def initialize
@@ -91,14 +95,6 @@ class Questionnaire
     end
   end
 
-  # def get_user_answer
-  #     while user_answer != ['a', 'b', 'c'].includes(user_answer)
-  #     puts "error, please select a different answer"
-  #     user_answer = gets.chomp
-  #     end
-
-  #     return user_answer
-  # end
 
   def get_user_answer
     user_answer = ''
@@ -156,14 +152,22 @@ class Questionnaire
   end
 end
 
+# Help menu, explains general overview of application
+class Help_menu
+  def help_options
+ puts "Help option"
+  end
+end
+
+
 # menu control flow
 case user_option
 when 1
-  About.new.option_1
+  About_menu.new.option_1
 when 2
-  Questionnaire.new.run_questionnaire
+  Questionnaire_menu.new.run_questionnaire
 when 3
-  puts 'Help'
+  puts Help_menu.new.help_options
 when 4
   puts 'Exit'
 end
