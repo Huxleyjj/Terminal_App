@@ -154,12 +154,12 @@ gem install bundler
 ```
 git clone https://github.com/Huxleyjj/Terminal_App
 
+```
+
 4. Now you can run the application in your terminal by typing:
 
 ```
 
 ruby index.rb
-
-```
 
 ```
