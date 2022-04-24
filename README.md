@@ -16,7 +16,7 @@
 
 ### Statement of Purpose and Scope
 
-Discover your Greek God is designed to match the users personality with a Greek God by answering various questions in the questionnaire. It is a easy to use terminal application, which will provide the personality match with users who are bored and need something to do. It is a fun distraction and was created for enjoyment purposes.
+Discover your Greek God is designed to match the users personality with a Greek God by answering various questions in the questionnaire. It is a easy to use terminal application and is a fun distraction for people looking to unwind. It was created for enjoyment purposes.
 
 ### Target Audience
 
@@ -32,7 +32,7 @@ Discover your Greek God includes three Greek Gods with distinct personalities. T
 
 The questionnaire is the primary design of this application. Several questions are printed to the screen. These questions present a scenario and ask the user to select one of the pre-defined responses. The user's Greek God is determined by their responses to these questions.
 
-### User Interaction and Experience
+## User Interaction and Experience
 
 The application starts with the main screen being displayed
 
@@ -41,3 +41,33 @@ The application starts with the main screen being displayed
 The user is asked for their name and then asked to select one of the options.
 
 ![menu](docs/menu.png)
+
+The first option 'Learn about the Greek Gods', has a selection of the three Greek Gods. By selecting one of them, a short detailed information about the God is presented. Detailing what they were the God of and a short summary of their personality.
+
+The second option, the 'Questionnaire' and main feature of the application, is where users are asked a series of questions and must select one of the various answers, in which they most relate to. A small message is conveyed to the user, guiding them on what to do. Then they are immediately asked the first question, and must respond by choosing one of the answers.
+
+![quiz](docs/quiz.png)
+
+If a user enters a invalid key, a error message will be printed alerting them to select one of the options available.
+
+![error](docs/error.png)
+
+If the user provides a legitimate response, the response is saved and the user is presented with the following question. This loop will continue until all questions have received valid responses. When all of the questions have been answered correctly, the application will present the user their Greek God. That is the end of the application.
+
+The help option provides details about the application.
+
+## Control Flow Diagram
+
+![controlflow](docs/controlflow.png)
+
+## Implemention Plan
+
+On the day we were told by our educators (Lavanya and Ash) to present our ideas to be approved, at first I had numerous ideas. Though on further thought and discussion with Lavanaya, I decided to come up with a questionnaire application, as I still currently work on Thursdays, Fridays and Saturdays. My other ideas were deemed somewhat to involved, and I could potentially suffer time constraints from my job.
+The planning for my app was very simple. At first I created the flowchart. From their I wrote down a overall plan (on pen and paper), in which I wanted to focus primarly on building the main fuction of the app (questinnaire) first.
+This was my first time using a trello board, so it took me a while to get use to organising and planning my work on the website. I created cards in which I would use as stepping stones, in order to begin and complete each part.
+
+Screenshot taken from early on in the process of using Trello Board
+
+![trello](docs/trello_1.png)
+
+Link to my Trello board [Trello board](https://trello.com/b/3AGly3Z8/terminalapp)
